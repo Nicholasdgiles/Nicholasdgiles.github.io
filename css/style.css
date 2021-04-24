@@ -293,7 +293,7 @@ padding-bottom: 16px;
 width: 20%;
 max-width: 150px;
 text-align: center;
-margin-top: 16%;
+margin-top: 12%;
 }
 
 .fullwidth {
@@ -319,9 +319,10 @@ text-align: center;
   margin-top: 12%;
   margin-bottom: 16%;
 }
+
 .title {
-  margin-top: 6%;
-  margin-bottom: 4%;
+  margin-top: 4%;
+  margin-bottom: 2%;
 }
 
 .highlight {
@@ -344,6 +345,43 @@ text-align: center;
 
 .icons > div {
   width: 16px;
+}
+
+/* ANIMATION */
+/* source: https://www.theappguruz.com/tag-tools/web/CSSAnimations/*/
+/* edits: changed the speed and location of the animation */
+
+.fadeInDown {
+-webkit-animation-name: fadeInDown;
+animation-name: fadeInDown;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+0% {
+opacity: 0;
+-webkit-transform: translate3d(0, -6%, 0);
+transform: translate3d(0, -6%, 0);
+}
+100% {
+opacity: 1;
+-webkit-transform: none;
+transform: none;
+}
+}
+@keyframes fadeInDown {
+0% {
+opacity: 0;
+-webkit-transform: translate3d(0, -6%, 0);
+transform: translate3d(0, -6%, 0);
+}
+100% {
+opacity: 1;
+-webkit-transform: none;
+transform: none;
+}
 }
 
 /* TABLET VIEW STYLING */
@@ -457,11 +495,20 @@ text-align: center;
     margin-bottom: 8%;
   }
 
+  .title {
+    margin-top: 6%;
+    margin-bottom: 4%;
+  }
+
   footer {
     margin-top: 26%;
     margin-bottom: 6%;
     text-align: center;
     font-size: 0.7em;
+  }
+
+  .appicon {
+  margin-top: 16%;
   }
 
   .bottom_nav {
